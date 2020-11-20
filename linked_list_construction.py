@@ -84,7 +84,6 @@ class DoublyLinkedList:
 	def removeNodeBindings(self, node): # we're using this to update the pointers of the surrounding node & given node
 		if node.prev is not None:
 			node.prev.next = node.next
-		node.prev = None
 		
 		if node.next is not None:
 			node.next.prev = node.prev

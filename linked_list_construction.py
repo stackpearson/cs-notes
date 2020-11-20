@@ -67,3 +67,10 @@ class DoublyLinkedList:
 			node = node.next
 			if nodeToRemove.value == value:
 				self.remove(nodeToRemove)
+
+    def remove(self, node):
+		if node == self.head:
+			self.head = self.head.next #if the node we're removing is head, need to update the head
+		if node == self.tail:
+			self.tail = self.tail.prev #same thing, but with the tail
+		self.removeNodeBindings(node)

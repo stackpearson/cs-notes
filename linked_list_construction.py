@@ -10,9 +10,9 @@ class DoublyLinkedList:
         self.tail = None
 
     def setHead(self, node):
-		if self.head is None:
-			self.head = node
-			self.tail = node
+        if self.head is None:
+            self.head = node
+            self.tail = node
 			return
 		self.insertBefore(self.head, node)
 
@@ -74,3 +74,19 @@ class DoublyLinkedList:
 		if node == self.tail:
 			self.tail = self.tail.prev #same thing, but with the tail
 		self.removeNodeBindings(node)
+
+    def containsNodeWithValue(self, value):
+        node = self.head
+		while node is not None and node.value != value:
+			node = node.next
+		return node is not None
+	
+	def removeNodeBindings(self, node): # we're using this to update the pointers of the surrounding node & given node
+		if node.prev is not None:
+			node.prev.next = node.next
+		node.prev = None
+		
+		if node.next is not None:
+			node.next.prev = node.prev
+		node.prev = None
+		node.next = None

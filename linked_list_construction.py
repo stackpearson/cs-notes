@@ -59,3 +59,11 @@ class DoublyLinkedList:
 			self.insertBefore(node, nodeToInsert)
 		else:
 			self.setTail(nodeToInsert)
+
+    def removeNodesWithValue(self, value):
+        node = self.head
+		while node is not None:
+			nodeToRemove = node
+			node = node.next
+			if nodeToRemove.value == value:
+				self.remove(nodeToRemove)

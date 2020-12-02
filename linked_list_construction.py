@@ -89,3 +89,20 @@ class DoublyLinkedList:
 			node.next.prev = node.prev
 		node.prev = None
 		node.next = None
+
+	# def checkForDisc(self, checkVal):
+	# 	count = 0
+		
+	# 	if self is None:
+	# 		prev = self.head
+
+	# 		if self.next is not None:
+	# 			self.next = checkVal
+	# 			count += 1
+	# 			prev = self
+
+	# 			if self.value = checkVal:
+	# 				self.next = self.next.next
+	# 				prev = self
+	# 	return self
+				

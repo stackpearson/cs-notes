@@ -1,21 +1,16 @@
 def almostIncreasingSequence(sequence):
-    # traverse array looking for nums > than num[i+1]
-    # if we find one
-    
-    i = 1
-    count = 0
-    prev = float('-inf')
-    while i < len(sequence):
-        print(sequence[i])
-        if sequence[i-1] >= sequence[i]:
-            count +=1
-            if sequence[i] < prev:
+    droppped = False
+    last = prev = min(sequence) - 1
+    for elm in sequence:
+        if elm <= last:
+            if droppped:
                 return False
-        prev = sequence[i-1]
-        i += 1
-    
-    print('count: ', count)
-    if count > 1:
-        return False
-    else:
-        return True
+            else:
+                droppped = True
+            if elm <= prev:
+                prev = last
+            elif elm >= prev:
+                prev = last = elm
+        else:
+            prev, last = last, elm
+    return True

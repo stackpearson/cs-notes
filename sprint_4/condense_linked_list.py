@@ -20,5 +20,3 @@ def condense_linked_list(node):
             current = previous.next
         
     return node
-
-    # print(node.next.value)

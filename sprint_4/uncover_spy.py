@@ -26,3 +26,4 @@ def uncover_spy(n, trust):
     
     print('people', people)       
     print('possibleSpies', possibleSpies)
+    

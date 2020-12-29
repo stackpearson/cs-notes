@@ -24,7 +24,7 @@ def helper(graph, start, current_path, all_paths, visited):
     # neighbor:  2
         # helper(2): 
     # DFS --> let's do recursively
-    # we need a home for _all_ the paths from `0` to `N-1`
+    # we need a home for _all_ the paths from `0` to `N-1` 
     # somewhere need to keep track of visited
     # a) We don't need to keep track of visited because it's a DAG, so no cycles
     # b) We don't _want_ to keep track of visited because there can be multiple paths through 
@@ -59,3 +59,5 @@ def helper(graph, start, current_path, all_paths, visited):
     # we've explored all of the current nodes neighbors, we're "done" with it
     # so we pop it off current_path
     current_path.pop()
+
+    # sprint is complete

@@ -14,3 +14,5 @@ def allLongestStrings(inputArray):
             longestStrings.append(string)
             
     return longestStrings
+
+    # this problem gave an array of strings and asked you return the string that had the largest length
